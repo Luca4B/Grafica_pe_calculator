@@ -51,7 +51,7 @@ namespace lab_02
 
         void DrawCirclePolar(int x0, int y0, int r, Color c)
         {
-            double step = 0.01; // mai mic => mai fin
+            double step = 0.01;
             double theta = 0;
 
             while (theta <= 2 * Math.PI)
@@ -75,10 +75,10 @@ namespace lab_02
                 DrawSymmetricPoints(x0, y0, x, y, c);
 
                 if (d < 0)
-                    d = d + 2 * x + 3;       // alegem E
+                    d = d + 2 * x + 3;
                 else
                 {
-                    d = d + 2 * (x - y) + 5; // alegem SE
+                    d = d + 2 * (x - y) + 5;
                     y--;
                 }
                 x++;
@@ -197,7 +197,6 @@ namespace lab_02
             int x0 = pictureBox1.Width / 2;
             int y0 = pictureBox1.Height / 2;
 
-            // opțional: cercul în care e înscris (ca ghid)
             DrawCircleMidpoint(x0, y0, r, Color.Black);
 
             DrawRegularPolygonInCircle(x0, y0, r, n, Color.Black);
